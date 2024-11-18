@@ -1,0 +1,6 @@
+framework module Pods_BlockBlastV4Tests {
+  umbrella header "Pods-BlockBlastV4Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_BlockBlastV4_BlockBlastV4UITests {
+  umbrella header "Pods-BlockBlastV4-BlockBlastV4UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02F0EA3F88A7C5D32D22DBF6 /* Pods_BlockBlastV4Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D730D826F1988C0C789ED3EC /* Pods_BlockBlastV4Tests.framework */; };
 		261600002CEAF7C000590245 /* BlockBlastV4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2616FFFF2CEAF7C000590245 /* BlockBlastV4UITests.swift */; };
 		261600022CEAF7C000590245 /* BlockBlastV4UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261600012CEAF7C000590245 /* BlockBlastV4UITestsLaunchTests.swift */; };
+		2616000F2CEAF94C00590245 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2616000E2CEAF94C00590245 /* GoogleService-Info.plist */; };
 		2616FFDC2CEAF7BD00590245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2616FFDB2CEAF7BD00590245 /* AppDelegate.swift */; };
 		2616FFDE2CEAF7BD00590245 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2616FFDD2CEAF7BD00590245 /* GameScene.sks */; };
 		2616FFE02CEAF7BD00590245 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2616FFDF2CEAF7BD00590245 /* Actions.sks */; };
-		2616FFE22CEAF7BD00590245 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2616FFE12CEAF7BD00590245 /* GameScene.swift */; };
-		2616FFE42CEAF7BD00590245 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2616FFE32CEAF7BD00590245 /* GameViewController.swift */; };
 		2616FFE72CEAF7BD00590245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2616FFE52CEAF7BD00590245 /* Main.storyboard */; };
 		2616FFE92CEAF7BF00590245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2616FFE82CEAF7BF00590245 /* Assets.xcassets */; };
 		2616FFEC2CEAF7BF00590245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2616FFEA2CEAF7BF00590245 /* LaunchScreen.storyboard */; };
 		2616FFF62CEAF7C000590245 /* BlockBlastV4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2616FFF52CEAF7C000590245 /* BlockBlastV4Tests.swift */; };
+		2669E51A2CEAFD390092B7EA /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669E5192CEAFD390092B7EA /* StorageManager.swift */; };
+		2669E51E2CEAFDD20092B7EA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669E51B2CEAFDCB0092B7EA /* GameViewController.swift */; };
+		2669E51F2CEAFDD20092B7EA /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669E51C2CEAFDCE0092B7EA /* GameScene.swift */; };
+		2669E5202CEAFDD20092B7EA /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2669E51D2CEAFDD20092B7EA /* GameOverScene.swift */; };
+		283A86F0550E62380BFC2425 /* Pods_BlockBlastV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431D09E229BDDF392DD6FD70 /* Pods_BlockBlastV4.framework */; };
+		98A28EE07AC9287F81C07B98 /* Pods_BlockBlastV4_BlockBlastV4UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABEA117ECB86544E95A3912F /* Pods_BlockBlastV4_BlockBlastV4UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		074A87EEB1F141744EE58777 /* Pods-BlockBlastV4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockBlastV4.debug.xcconfig"; path = "Target Support Files/Pods-BlockBlastV4/Pods-BlockBlastV4.debug.xcconfig"; sourceTree = "<group>"; };
 		261600012CEAF7C000590245 /* BlockBlastV4UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockBlastV4UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2616000E2CEAF94C00590245 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2616FFD82CEAF7BD00590245 /* BlockBlastV4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockBlastV4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2616FFDB2CEAF7BD00590245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2616FFDD2CEAF7BD00590245 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		2616FFDF2CEAF7BD00590245 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		2616FFE12CEAF7BD00590245 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		2616FFE32CEAF7BD00590245 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		2616FFE62CEAF7BD00590245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2616FFE82CEAF7BF00590245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2616FFEB2CEAF7BF00590245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +58,18 @@
 		2616FFF52CEAF7C000590245 /* BlockBlastV4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockBlastV4Tests.swift; sourceTree = "<group>"; };
 		2616FFFB2CEAF7C000590245 /* BlockBlastV4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockBlastV4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2616FFFF2CEAF7C000590245 /* BlockBlastV4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockBlastV4UITests.swift; sourceTree = "<group>"; };
+		2669E5192CEAFD390092B7EA /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		2669E51B2CEAFDCB0092B7EA /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		2669E51C2CEAFDCE0092B7EA /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		2669E51D2CEAFDD20092B7EA /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		310158C565E958161EB476B4 /* Pods-BlockBlastV4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockBlastV4.release.xcconfig"; path = "Target Support Files/Pods-BlockBlastV4/Pods-BlockBlastV4.release.xcconfig"; sourceTree = "<group>"; };
+		431D09E229BDDF392DD6FD70 /* Pods_BlockBlastV4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockBlastV4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		703EBE21CB1EB7E3310CED17 /* Pods-BlockBlastV4Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockBlastV4Tests.debug.xcconfig"; path = "Target Support Files/Pods-BlockBlastV4Tests/Pods-BlockBlastV4Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A978E250FE775F897871A328 /* Pods-BlockBlastV4-BlockBlastV4UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockBlastV4-BlockBlastV4UITests.release.xcconfig"; path = "Target Support Files/Pods-BlockBlastV4-BlockBlastV4UITests/Pods-BlockBlastV4-BlockBlastV4UITests.release.xcconfig"; sourceTree = "<group>"; };
+		ABEA117ECB86544E95A3912F /* Pods_BlockBlastV4_BlockBlastV4UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockBlastV4_BlockBlastV4UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C25DFDF8719FD7A7F835AB7B /* Pods-BlockBlastV4-BlockBlastV4UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockBlastV4-BlockBlastV4UITests.debug.xcconfig"; path = "Target Support Files/Pods-BlockBlastV4-BlockBlastV4UITests/Pods-BlockBlastV4-BlockBlastV4UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D730D826F1988C0C789ED3EC /* Pods_BlockBlastV4Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlockBlastV4Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE4876D1A85375B72EFE50BD /* Pods-BlockBlastV4Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlockBlastV4Tests.release.xcconfig"; path = "Target Support Files/Pods-BlockBlastV4Tests/Pods-BlockBlastV4Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				283A86F0550E62380BFC2425 /* Pods_BlockBlastV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02F0EA3F88A7C5D32D22DBF6 /* Pods_BlockBlastV4Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98A28EE07AC9287F81C07B98 /* Pods_BlockBlastV4_BlockBlastV4UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +107,8 @@
 				2616FFF42CEAF7C000590245 /* BlockBlastV4Tests */,
 				2616FFFE2CEAF7C000590245 /* BlockBlastV4UITests */,
 				2616FFD92CEAF7BD00590245 /* Products */,
+				7FAE93D5D374C5F3CB56A9E4 /* Pods */,
+				AC7DD4F89D683DA98FE8419F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,14 +125,17 @@
 		2616FFDA2CEAF7BD00590245 /* BlockBlastV4 */ = {
 			isa = PBXGroup;
 			children = (
+				2669E5192CEAFD390092B7EA /* StorageManager.swift */,
 				2616FFDB2CEAF7BD00590245 /* AppDelegate.swift */,
+				2669E51D2CEAFDD20092B7EA /* GameOverScene.swift */,
+				2669E51C2CEAFDCE0092B7EA /* GameScene.swift */,
+				2669E51B2CEAFDCB0092B7EA /* GameViewController.swift */,
 				2616FFDD2CEAF7BD00590245 /* GameScene.sks */,
 				2616FFDF2CEAF7BD00590245 /* Actions.sks */,
-				2616FFE12CEAF7BD00590245 /* GameScene.swift */,
-				2616FFE32CEAF7BD00590245 /* GameViewController.swift */,
 				2616FFE52CEAF7BD00590245 /* Main.storyboard */,
 				2616FFE82CEAF7BF00590245 /* Assets.xcassets */,
 				2616FFEA2CEAF7BF00590245 /* LaunchScreen.storyboard */,
+				2616000E2CEAF94C00590245 /* GoogleService-Info.plist */,
 			);
 			path = BlockBlastV4;
 			sourceTree = "<group>";
@@ -131,6 +157,29 @@
 			path = BlockBlastV4UITests;
 			sourceTree = "<group>";
 		};
+		7FAE93D5D374C5F3CB56A9E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				074A87EEB1F141744EE58777 /* Pods-BlockBlastV4.debug.xcconfig */,
+				310158C565E958161EB476B4 /* Pods-BlockBlastV4.release.xcconfig */,
+				C25DFDF8719FD7A7F835AB7B /* Pods-BlockBlastV4-BlockBlastV4UITests.debug.xcconfig */,
+				A978E250FE775F897871A328 /* Pods-BlockBlastV4-BlockBlastV4UITests.release.xcconfig */,
+				703EBE21CB1EB7E3310CED17 /* Pods-BlockBlastV4Tests.debug.xcconfig */,
+				FE4876D1A85375B72EFE50BD /* Pods-BlockBlastV4Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC7DD4F89D683DA98FE8419F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				431D09E229BDDF392DD6FD70 /* Pods_BlockBlastV4.framework */,
+				ABEA117ECB86544E95A3912F /* Pods_BlockBlastV4_BlockBlastV4UITests.framework */,
+				D730D826F1988C0C789ED3EC /* Pods_BlockBlastV4Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 261600052CEAF7C000590245 /* Build configuration list for PBXNativeTarget "BlockBlastV4" */;
 			buildPhases = (
+				C503202A72285F2FD3834E82 /* [CP] Check Pods Manifest.lock */,
 				2616FFD42CEAF7BD00590245 /* Sources */,
 				2616FFD52CEAF7BD00590245 /* Frameworks */,
 				2616FFD62CEAF7BD00590245 /* Resources */,
+				146310C4EEDDF21F712CDCB1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 261600082CEAF7C000590245 /* Build configuration list for PBXNativeTarget "BlockBlastV4Tests" */;
 			buildPhases = (
+				EFDEFBC50D2EACEFCE84150D /* [CP] Check Pods Manifest.lock */,
 				2616FFED2CEAF7C000590245 /* Sources */,
 				2616FFEE2CEAF7C000590245 /* Frameworks */,
 				2616FFEF2CEAF7C000590245 /* Resources */,
@@ -173,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2616000B2CEAF7C000590245 /* Build configuration list for PBXNativeTarget "BlockBlastV4UITests" */;
 			buildPhases = (
+				49CE860ACD14294BDA6D8BA4 /* [CP] Check Pods Manifest.lock */,
 				2616FFF72CEAF7C000590245 /* Sources */,
 				2616FFF82CEAF7C000590245 /* Frameworks */,
 				2616FFF92CEAF7C000590245 /* Resources */,
+				138220ED4859CEAED2697477 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,6 +294,7 @@
 				2616FFE92CEAF7BF00590245 /* Assets.xcassets in Resources */,
 				2616FFEC2CEAF7BF00590245 /* LaunchScreen.storyboard in Resources */,
 				2616FFE02CEAF7BD00590245 /* Actions.sks in Resources */,
+				2616000F2CEAF94C00590245 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,14 +314,119 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		138220ED4859CEAED2697477 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockBlastV4-BlockBlastV4UITests/Pods-BlockBlastV4-BlockBlastV4UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockBlastV4-BlockBlastV4UITests/Pods-BlockBlastV4-BlockBlastV4UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlockBlastV4-BlockBlastV4UITests/Pods-BlockBlastV4-BlockBlastV4UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		146310C4EEDDF21F712CDCB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockBlastV4/Pods-BlockBlastV4-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlockBlastV4/Pods-BlockBlastV4-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlockBlastV4/Pods-BlockBlastV4-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49CE860ACD14294BDA6D8BA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlockBlastV4-BlockBlastV4UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C503202A72285F2FD3834E82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlockBlastV4-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFDEFBC50D2EACEFCE84150D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlockBlastV4Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2616FFD42CEAF7BD00590245 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2616FFE22CEAF7BD00590245 /* GameScene.swift in Sources */,
-				2616FFE42CEAF7BD00590245 /* GameViewController.swift in Sources */,
+				2669E5202CEAFDD20092B7EA /* GameOverScene.swift in Sources */,
 				2616FFDC2CEAF7BD00590245 /* AppDelegate.swift in Sources */,
+				2669E51E2CEAFDD20092B7EA /* GameViewController.swift in Sources */,
+				2669E51F2CEAFDD20092B7EA /* GameScene.swift in Sources */,
+				2669E51A2CEAFD390092B7EA /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +519,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -422,7 +582,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -443,6 +603,7 @@
 		};
 		261600062CEAF7C000590245 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 074A87EEB1F141744EE58777 /* Pods-BlockBlastV4.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -453,8 +614,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,6 +631,7 @@
 		};
 		261600072CEAF7C000590245 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 310158C565E958161EB476B4 /* Pods-BlockBlastV4.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -480,8 +642,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -497,6 +659,7 @@
 		};
 		261600092CEAF7C000590245 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 703EBE21CB1EB7E3310CED17 /* Pods-BlockBlastV4Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -516,6 +679,7 @@
 		};
 		2616000A2CEAF7C000590245 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE4876D1A85375B72EFE50BD /* Pods-BlockBlastV4Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -535,6 +699,7 @@
 		};
 		2616000C2CEAF7C000590245 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C25DFDF8719FD7A7F835AB7B /* Pods-BlockBlastV4-BlockBlastV4UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +717,7 @@
 		};
 		2616000D2CEAF7C000590245 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A978E250FE775F897871A328 /* Pods-BlockBlastV4-BlockBlastV4UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
