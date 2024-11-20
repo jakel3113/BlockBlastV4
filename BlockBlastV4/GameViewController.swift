@@ -15,13 +15,15 @@ class GameViewController: UIViewController {
                 
         super.viewDidLoad()
         
+        //generates UserID if does not exist
+        let defaults = UserDefaults.standard
+        if(defaults.integer(forKey: "userID") == 0) {
+            defaults.set(Int.random(in: 0...999999999), forKey: "userID")
+        }
+        
         if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
             let scene = GameScene(size: CGSize(width: 1536, height: 2048))
-                // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
-                
-                // Present the scene
                 view.presentScene(scene)
             
         }

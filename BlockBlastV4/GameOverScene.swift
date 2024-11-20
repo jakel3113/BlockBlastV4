@@ -13,11 +13,13 @@ class GameOverScene: SKScene {
     var score: Int
     var highScore: Int
     var playAgainRect = CGRect()
+    var savedData: [[String: Any]]
     
-    init(size: CGSize, score: Int, highScore: Int) {
+    init(size: CGSize, score: Int, highScore: Int, savedData: [[String: Any]]) {
         
         self.score = score
         self.highScore = highScore
+        self.savedData = savedData
         super.init(size: size)
         
     }
@@ -27,11 +29,26 @@ class GameOverScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        
+        //upload all data to Firebase
+        let storageManager = StorageManager()
+        let defaults = UserDefaults.standard
+        var currentIteration = defaults.integer(forKey: "currentIteration")
+        
+        for dataDict in savedData {
+            currentIteration += 1
+            storageManager.uploadData(finalScore: score, currentScore: dataDict["currentScore"] as! Int, gridStatus: dataDict["gridStatus"] as! [Bool], pointingArrIndexes: dataDict["pointingArrIndexes"] as! [Int], blockRotations: dataDict["blockRotations"] as! [Int], currentIteration: currentIteration, userID: defaults.integer(forKey: "userID"))
+        }
+        
+        defaults.set(currentIteration, forKey: "currentIteration")
+        
+        //create UI
         let startPoint = CGPoint(x: self.size.width / 2, y: self.size.height / 2 + 500)
         var labelArr = [SKLabelNode]()
         let textArr = [("Game Over!", 100), ("Score", 50), (String(score), 120), ("High Score", 50), (String(highScore), 120)]
         
         for index in 0...textArr.count {
+            
             if(index != textArr.count) {
                 labelArr.append(SKLabelNode(fontNamed: "Chalkduster"))
                 labelArr[index].text = textArr[index].0

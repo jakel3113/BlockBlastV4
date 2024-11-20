@@ -29,6 +29,7 @@ class GameScene: SKScene {
     var newPieces: [GamePiece?] = [nil, nil, nil]
     var clearBlockIndicator = [SKShapeNode]()
     let defaults = UserDefaults.standard
+    var savedData: [[String: Any]] = []
     
     override init(size: CGSize) {
         
@@ -468,31 +469,56 @@ class GameScene: SKScene {
     
     func addNewPieces() {
         newPieces = []
-        
-        var doesFit = false
+        var pointingArrIndexes = [Int]()
+        var rotationNums  = [Int]()
         
         //makes sure first piece can fit
-        var tempPiece = GamePiece(color: UIColor.red,  pointingArr: getPointingArr().0, startBlockZone: blockZone1)
+        var pointingData = getPointingArr()
+        var tempPiece = GamePiece(color: UIColor.red,  pointingArr: pointingData.0, startBlockZone: blockZone1)
         
         for _ in 0...5 {
             if(gridInformation.canFit(piece: tempPiece)) {
-                doesFit = true
+                //use if fits
                 break
+            } else {
+                //generate new if not
+                pointingData = getPointingArr()
+                tempPiece = GamePiece(color: UIColor.red,  pointingArr: pointingData.0, startBlockZone: blockZone1)
             }
-            tempPiece = GamePiece(color: UIColor.red,  pointingArr: getPointingArr().0, startBlockZone: blockZone1)
         }
         
-        if(doesFit) {
-            newPieces.append(tempPiece)
-        } else {
-            newPieces.append(GamePiece(color: UIColor.red, pointingArr: [0], startBlockZone: blockZone1))
-        }
-        
+        //save block data
+        pointingArrIndexes.append(pointingData.1)
+        rotationNums.append(pointingData.2)
+        newPieces.append(tempPiece)
         blockZone1.piece = newPieces[0]
-        newPieces.append(GamePiece(color: UIColor.blue, pointingArr: getPointingArr().0, startBlockZone: blockZone2))
+        
+        //adds other pieces
+        pointingData = getPointingArr()
+        pointingArrIndexes.append(pointingData.1)
+        rotationNums.append(pointingData.2)
+        newPieces.append(GamePiece(color: UIColor.blue, pointingArr: pointingData.0, startBlockZone: blockZone2))
         blockZone2.piece = newPieces[1]
-        newPieces.append(GamePiece(color: UIColor.yellow, pointingArr: getPointingArr().0, startBlockZone: blockZone3))
+        
+        pointingData = getPointingArr()
+        pointingArrIndexes.append(pointingData.1)
+        rotationNums.append(pointingData.2)
+        newPieces.append(GamePiece(color: UIColor.yellow, pointingArr: pointingData.0, startBlockZone: blockZone3))
         blockZone3.piece = newPieces[2]
+        
+        //create Bool gridArr
+        var boolGridArr = [Bool]()
+        for color in gridInformation.gridArr {
+            if(color == nil) {
+                boolGridArr.append(false)
+            } else {
+                boolGridArr.append(true)
+            }
+        }
+        
+        //update savedData
+        savedData.append(["currentScore": score, "gridStatus": boolGridArr, "pointingArrIndexes": pointingArrIndexes, "blockRotations": rotationNums])
+        
         
         for index in 0...2 {
             let piece = newPieces[index]!
@@ -1155,7 +1181,7 @@ class GameScene: SKScene {
                     defaults.set(score, forKey: "highscore")
                 }
                 
-                let scene = GameOverScene(size: CGSize(width: 1536, height: 2048), score: score, highScore: defaults.integer(forKey: "highscore"))
+                let scene = GameOverScene(size: CGSize(width: 1536, height: 2048), score: score, highScore: defaults.integer(forKey: "highscore"), savedData: savedData)
                 
                 scene.scaleMode = .aspectFill
                 view.presentScene(scene)
