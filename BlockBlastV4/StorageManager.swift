@@ -10,30 +10,6 @@ import FirebaseDatabase
 
 class StorageManager {
     
-    func getCurrentIteration() -> Int{
-        
-        let iterationRef = Database.database().reference()
-        var value = 199999
-        
-        iterationRef.observeSingleEvent(of: .value, with: { snapshot in
-          // Get user value
-            value = snapshot.value as? Int ?? 299999
-            
-        }) { error in
-            print(error.localizedDescription)
-        }
-        
-        return value
-        
-    }
-    
-    func setCurrentIteration(currentIteration: Int) {
-        let ref = Database.database().reference()
-        let testRef = ref.child("test1")
-        
-        testRef.setValue(currentIteration)
-    }
-    
     func uploadData(finalScore: Int, currentScore: Int, gridStatus: [Bool], pointingArrIndexes: [Int], blockRotations: [Int], currentIteration: Int, userID: Int) {
         
         let ref = Database.database().reference()

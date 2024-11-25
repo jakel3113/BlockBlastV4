@@ -33,11 +33,12 @@ class GameOverScene: SKScene {
         //upload all data to Firebase
         let storageManager = StorageManager()
         let defaults = UserDefaults.standard
-        var currentIteration = defaults.integer(forKey: "currentIteration")
+        var currentIteration: Int = defaults.integer(forKey: "currentIteration")
+        let userID = defaults.integer(forKey: "userID")
         
         for dataDict in savedData {
+            storageManager.uploadData(finalScore: score, currentScore: dataDict["currentScore"] as! Int, gridStatus: dataDict["gridStatus"] as! [Bool], pointingArrIndexes: dataDict["pointingArrIndexes"] as! [Int], blockRotations: dataDict["blockRotations"] as! [Int], currentIteration: currentIteration, userID: userID)
             currentIteration += 1
-            storageManager.uploadData(finalScore: score, currentScore: dataDict["currentScore"] as! Int, gridStatus: dataDict["gridStatus"] as! [Bool], pointingArrIndexes: dataDict["pointingArrIndexes"] as! [Int], blockRotations: dataDict["blockRotations"] as! [Int], currentIteration: currentIteration, userID: defaults.integer(forKey: "userID"))
         }
         
         defaults.set(currentIteration, forKey: "currentIteration")

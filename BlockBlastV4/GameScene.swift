@@ -406,7 +406,8 @@ class GameScene: SKScene {
             [0, 1, 1],
             [2, 1, 1],
             [1, 2, 1],
-            [1, 0, 1]
+            [1, 0, 1],
+            [0, 1, 3, 3]
         ]
         
         //random arr and random rotation
@@ -471,7 +472,7 @@ class GameScene: SKScene {
         newPieces = []
         var pointingArrIndexes = [Int]()
         var rotationNums  = [Int]()
-        
+
         //makes sure first piece can fit
         var pointingData = getPointingArr()
         var tempPiece = GamePiece(color: UIColor.red,  pointingArr: pointingData.0, startBlockZone: blockZone1)
@@ -507,12 +508,10 @@ class GameScene: SKScene {
         blockZone3.piece = newPieces[2]
         
         //create Bool gridArr
-        var boolGridArr = [Bool]()
-        for color in gridInformation.gridArr {
-            if(color == nil) {
-                boolGridArr.append(false)
-            } else {
-                boolGridArr.append(true)
+        var boolGridArr = Array.init(repeating: false, count: 64)
+        for index in 0...boolGridArr.count-1 {
+            if(gridInformation.gridArr[index] != nil) {
+                boolGridArr[index] = true
             }
         }
         
@@ -623,6 +622,8 @@ class GameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        //dev playground/Users/jakelonseth/Downloads/blockblastv4-default-rtdb-627720940-export.csv
+        //defaults.set(0, forKey: "currentIteration")
         
         let background = SKShapeNode(rect: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
         background.zPosition = 0
@@ -631,7 +632,7 @@ class GameScene: SKScene {
         
         //High Score Label
         let scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
-        scoreLabel.text = "Highscore: "
+        scoreLabel.text = "Score: "
         scoreLabel.fontSize = 62
         scoreLabel.fontColor = UIColor.white
         scoreLabel.position = CGPoint(x: self.size.width / 2 - 100, y: 1850)
