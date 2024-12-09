@@ -407,7 +407,9 @@ class GameScene: SKScene {
             [2, 1, 1],
             [1, 2, 1],
             [1, 0, 1],
-            [0, 1, 3, 3]
+            [0, 1, 3, 3],
+            [3, 3, 2, 2],
+            [3, 3, 0, 0]
         ]
         
         //random arr and random rotation
@@ -622,8 +624,8 @@ class GameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
-        //dev playground/Users/jakelonseth/Downloads/blockblastv4-default-rtdb-627720940-export.csv
-        //defaults.set(0, forKey: "currentIteration")
+        /*defaults.set(0, forKey: "currentIteration")
+        defaults.set(0, forKey: "highscore") */
         
         let background = SKShapeNode(rect: CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height))
         background.zPosition = 0
@@ -645,6 +647,16 @@ class GameScene: SKScene {
         scoreValueLabel.position = CGPoint(x: self.size.width / 2 + 200, y: 1850)
         scoreValueLabel.zPosition = 6
         self.addChild(scoreValueLabel)
+        
+        //userID
+        let userIdText = "UserID: " + String(defaults.integer(forKey: "userID"))
+        let userIdLabel = SKLabelNode(text: userIdText)
+        userIdLabel.fontSize = 30
+        userIdLabel.position = CGPoint(x: self.size.width / 2 - 30, y: 800)
+        userIdLabel.zPosition = 2
+        userIdLabel.fontColor = UIColor.white
+        userIdLabel.fontName = "Chalkduster"
+        self.addChild(userIdLabel)
         
         //Initializes shadow blocks
         for index in 0...8 {
@@ -1178,11 +1190,13 @@ class GameScene: SKScene {
             //switches scene
             if let view = self.view {
                 
+                var isHighestScore = false
                 if(score > defaults.integer(forKey: "highscore")) {
                     defaults.set(score, forKey: "highscore")
+                    isHighestScore = true
                 }
                 
-                let scene = GameOverScene(size: CGSize(width: 1536, height: 2048), score: score, highScore: defaults.integer(forKey: "highscore"), savedData: savedData)
+                let scene = GameOverScene(size: CGSize(width: 1536, height: 2048), score: score, highScore: defaults.integer(forKey: "highscore"), savedData: savedData, isHighestScore: isHighestScore)
                 
                 scene.scaleMode = .aspectFill
                 view.presentScene(scene)

@@ -15,10 +15,15 @@ class StorageManager {
         let ref = Database.database().reference()
         
         //upload data
-        let coreDataRef = ref.child("coreData")
         let coreDataDict: [String: Any] = ["finalScore": finalScore, "currentScore": currentScore, "gridStatus": gridStatus, "pointingArrIndexes": pointingArrIndexes, "blockRotations": blockRotations]
         
-        coreDataRef.child(String(userID)).child(String(currentIteration)).setValue(coreDataDict)
+        ref.child(String(userID)).child(String(currentIteration)).setValue(coreDataDict)
+    }
+    
+    func uploadHighScore(highScore: Int, userID: Int) {
+        let ref = Database.database().reference()
+        
+        ref.child("highscores").child(String(userID)).setValue(highScore)
     }
     
 }

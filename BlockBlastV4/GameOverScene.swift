@@ -14,12 +14,14 @@ class GameOverScene: SKScene {
     var highScore: Int
     var playAgainRect = CGRect()
     var savedData: [[String: Any]]
+    var isHighestScore: Bool
     
-    init(size: CGSize, score: Int, highScore: Int, savedData: [[String: Any]]) {
+    init(size: CGSize, score: Int, highScore: Int, savedData: [[String: Any]], isHighestScore: Bool) {
         
         self.score = score
         self.highScore = highScore
         self.savedData = savedData
+        self.isHighestScore = isHighestScore
         super.init(size: size)
         
     }
@@ -39,6 +41,10 @@ class GameOverScene: SKScene {
         for dataDict in savedData {
             storageManager.uploadData(finalScore: score, currentScore: dataDict["currentScore"] as! Int, gridStatus: dataDict["gridStatus"] as! [Bool], pointingArrIndexes: dataDict["pointingArrIndexes"] as! [Int], blockRotations: dataDict["blockRotations"] as! [Int], currentIteration: currentIteration, userID: userID)
             currentIteration += 1
+        }
+        
+        if(isHighestScore) {
+            storageManager.uploadHighScore(highScore: highScore, userID: userID)
         }
         
         defaults.set(currentIteration, forKey: "currentIteration")
